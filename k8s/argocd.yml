@@ -6,14 +6,15 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ajajpkhan/samplenginx-k9s.git
+    repoURL: https://github.com/<your-username>/hello-apache.git
     targetRevision: main
     path: k8s
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: hello-apache
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-
+    syncOptions:
+      - CreateNamespace=true
