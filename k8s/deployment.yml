@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-apache
+  namespace: hello-apache
 spec:
   replicas: 2
   selector:
@@ -24,4 +25,3 @@ spec:
           limits:
             cpu: "300m"
             memory: "256Mi"
-
