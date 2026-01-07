@@ -4,7 +4,7 @@ metadata:
   name: hello-apache
   namespace: hello-apache
 spec:
-  replicas: 2
+  replicas: 0
   selector:
     matchLabels:
       app: hello-apache
